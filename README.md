@@ -1,6 +1,6 @@
 # QA application/Control panel
 
-### TODOS:
+### TODOs:
 
 * Make client side work properly with mockdata using axios's mockadapter
 * Clean sass dir
