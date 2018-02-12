@@ -1,0 +1,29 @@
+$gap-top-bottom: 0 !default
+$column-gap: 2.3077rem !default
+@import "~bulma/sass/grid/columns.sass"
+@import "~bulma/sass/grid/tiles.sass"
+
+// GRID CLASS OVERRIDE
+// Set a variable to run the if statement against
+
+=margin-if-mixin-for-margin-bottom-of-grid
+  @if $gap-top-bottom == 0
+      margin-bottom: 1.5em
+  @else
+      margin-bottom: calc(1.5rem - #{$gap-top-bottom})
+
+
+.column
+  padding: $gap-top-bottom $column-gap
+.columns
+  margin-left: (-$column-gap)
+  margin-right: (-$column-gap)
+  margin-top: (-$gap-top-bottom)
+  &:last-child
+    margin-bottom: (-$gap-top-bottom)
+  &:not(:last-child)
+    +margin-if-mixin-for-margin-bottom-of-grid
+
+
+
+

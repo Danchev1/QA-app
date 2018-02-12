@@ -1,0 +1,149 @@
+@import "~bulma/sass/components/breadcrumb.sass"
+$card-header-weight: $weight-semibold
+@import "~bulma/sass/components/card.sass"
+$dropdown-content-shadow: 0 4px 10px -3px rgba(9, 30, 66, 0.2), 0 0 1px rgba(9, 30, 66, 0.25)
+$dropdown-item-hover-background-color: $green
+$dropdown-item-hover-color: $white
+@import "~bulma/sass/components/dropdown.sass"
+@import "~bulma/sass/components/level.sass"
+@import "~bulma/sass/components/media.sass"
+@import "~bulma/sass/components/menu.sass"
+@import "~bulma/sass/components/message.sass"
+
+$modal-card-foot-radius: 0
+$modal-card-head-radius: 0
+$modal-background-background-color: rgba(0,0,0,0.6) !default
+$modal-card-foot-border-top: $grey-light
+$modal-card-head-background-color: $grey-lighter
+$modal-card-head-border-bottom: none
+$modal-content-width: 560px
+$modal-card-title-color: $green
+$modal-card-title-size: $size-3
+@import "~bulma/sass/components/modal.sass"
+@import "~bulma/sass/components/nav.sass"
+@import "~bulma/sass/components/navbar.sass"
+@import "~bulma/sass/components/pagination.sass"
+@import "~bulma/sass/components/panel.sass"
+$tabs-border-bottom-color: $grey
+$tabs-link-color: $grey
+$tabs-link-padding: 0.5em 1em 0.2em
+$tabs-link-hover-border-bottom-color: $grey
+$tabs-link-hover-color: $grey-dark
+@import "~bulma/sass/components/tabs.sass"
+
+
+// NAVBAR CLASS OVERRIDE
+.navbar-burger.is-active span:nth-child(1)
+  margin-top: -7px
+
+
+// MODAL CLASS OVERRIDE
+.modal-content,
+.modal-card
+  box-shadow: 0 10px 20px rgba(0,0,0,.3)
+
+.modal-card-body
+  overflow: visible
+
+
+.modal-card-foot
+  background-color: $modal-card-head-background-color
+
+
+.modal
+  .form-component
+    max-width: 100%
+    margin-top: 1.5rem
+
+  .file-component .label
+    margin-bottom: 0.5385em
+
+
+.modal-card-title
+  font-family: $antonio-light
+  font-weight: $weight-light
+
+
+
+// TABS CLASS OVERRIDE
+
+
+.tabs
+  margin-top: 2rem
+  li
+   margin: 0 1em
+   &.is-active
+    a
+     -webkit-box-shadow: 0 2px 0 0 rgb(40, 200, 131)
+     -moz-box-shadow: 0 2px 0 0 rgb(40, 200, 131)
+     box-shadow: 0 2px 0 0 rgb(40, 200, 131)
+
+   &:first-child
+    margin-left: 0
+
+  a
+    margin-bottom: 1px
+    -webkit-transition: all 0.13s ease-in
+    -moz-transition: all 0.13s ease-in
+    transition: all 0.13s ease-in
+    -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255)
+    -moz-box-shadow: 0 1px 0 0 rgb(255, 255, 255)
+    box-shadow: 0 1px 0 0 rgb(255, 255, 255)
+    text-transform: uppercase
+    border-bottom: none
+
+
+// ACTION BAR
+.action-bar
+  float: right
+  font-size: 1rem
+  font-family: $opensans-regular
+  font-weight: $weight-normal
+  .dropdown-trigger
+    margin: 0 auto
+  .dropdown-menu
+    left: auto
+    right: 0
+    z-index: 999
+
+  .button
+    height: 2.2rem
+    width: 2.2rem
+    border: none
+    border-radius: 50%
+    line-height: 1
+    &:focus:not(:active)
+      background-color: $grey-light
+      color: $green
+    &:hover
+      background-color: $grey-light
+    i
+     &:before
+      font-size: 2rem
+
+  .dropdown-content
+    padding: 0
+
+  .dropdown-item
+    &:first-child
+      border-top-left-radius: 3px
+      border-top-right-radius: 3px
+    &:last-child
+      border-bottom-left-radius: 3px
+      border-bottom-right-radius: 3px
+    cursor: pointer
+    text-align: left
+    font-size: $size-normal
+    &:hover
+      background-color: $dropdown-item-hover-background-color
+      color: $dropdown-item-hover-color
+
+
+
+// CARD CLASS
+.card-header-title
+  font-family: $opensans-semibold
+
+.card-header-icon
+  padding: 0.5rem
+

@@ -1,0 +1,69 @@
+@import "custom_mixin_fonts"
+
+//Font Faces init
++font-face('OpenSans', '../fonts/opensans-regular-webfont', 400, normal)
++font-face('OpenSans-Semibold', '../fonts/opensans-semibold-webfont', 600, normal)
++font-face('OpenSans-Bold', '../fonts/opensans-bold-webfont', 700, normal)
++font-face('Antonio', '../fonts/antonio-regular-webfont', 400, normal)
++font-face('Antonio-Light', '../fonts/antonio-light-webfont', 300, normal)
+
+$opensans-regular: 'OpenSans', "Arial", sans-serif !default
+$opensans-semibold: 'OpenSans-Semibold', "Arial", sans-serif !default
+$opensans-bold: 'OpenSans-Bold', "Arial", sans-serif !default
+$antonio-regular: 'Antonio', "Arial", sans-serif !default
+$antonio-light: 'Antonio-Light', "Arial", sans-serif !default
+
+$blue: 	hsl(195, 86%, 42%) !default
+$yellow: hsl(44, 100%, 53%) !default
+$orange: 	hsl(36, 100%, 52%) !default
+$purple: hsl(256, 100%, 75%) !default
+$green-darker: hsl(175, 74%, 29%) !default
+$green-dark: 	hsl(171, 73%, 36%) !default
+$green: hsl(154, 67%, 47%) !default
+$green-lighter: hsl(153, 31%, 86%) !default
+$red: 	hsl(0, 100%, 69%) !default
+$white-ter: hsl(120, 23%, 97%) !default
+$black: hsl(0, 0%, 0%) !default
+$grey-darker: hsl(180, 7%, 15%)
+$grey-dark: 	hsl(150, 3%, 44%) !default
+$grey: hsl(0, 0%, 75%) !default
+$grey-light: 	hsl(0, 0%, 90%) !default
+$grey-lighter: 	hsl(240, 12%, 97%) !default
+$family-monospace: monospace !default
+$family-sans-serif: $opensans-regular
+$size-1: 2.808rem !default
+$size-2: 2.308rem !default
+$size-3: 1.808rem !default
+$size-4: 1.5rem !default
+$size-5: 1.3rem !default
+$size-6: 1rem !default
+$size-7: 0.75rem !default
+
+$primary: $green !default
+$info: $blue !default
+$success: $green !default
+$warning: $yellow !default
+$danger: $red !default
+$light: $white-ter !default
+$dark: $grey-darker !default
+$light-invert: $dark !default
+$dark-invert: $light !default
+$text: $black
+@import "~bulma/sass/utilities/initial-variables.sass"
+@import "~bulma/sass/utilities/functions.sass"
+$orange-invert: findColorInvert($orange) !default
+$yellow-invert: findColorInvert($yellow) !default
+$green-invert: findColorInvert($green) !default
+$blue-invert: findColorInvert($blue) !default
+$purple-invert: findColorInvert($purple) !default
+$red-invert: findColorInvert($red) !default
+$link-hover: $green-dark
+@import "~bulma/sass/utilities/derived-variables.sass"
+$primary-invert: $purple-invert !default
+$info-invert: $blue-invert !default
+$success-invert: $green-invert !default
+$warning-invert: $yellow-invert !default
+$danger-invert: $red-invert !default
+@import "~bulma/sass/utilities/animations.sass"
+@import "~bulma/sass/utilities/mixins.sass"
+@import "~bulma/sass/utilities/controls.sass"

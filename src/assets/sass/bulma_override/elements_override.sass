@@ -1,0 +1,233 @@
+@import "~bulma/sass/elements/box.sass"
+$button-focus-box-shadow-size: 0 0 0 0
+$button-border-color: $grey-light
+@import "~bulma/sass/elements/button.sass"
+@import "~bulma/sass/elements/container.sass"
+@import "~bulma/sass/elements/content.sass"
+$input-color: $black
+$input-focus-color: $grey
+$input-border-color: $grey-light
+$input-focus-border-color: $grey
+$input-shadow: none
+$label-color: $grey-dark
+$label-weight: $weight-normal
+$control-radius: 0
+$input-icon-color: $grey-light
+$input-icon-active-color: $green
+@import "~bulma/sass/elements/form.sass"
+@import "~bulma/sass/elements/icon.sass"
+@import "~bulma/sass/elements/image.sass"
+@import "~bulma/sass/elements/notification.sass"
+@import "~bulma/sass/elements/progress.sass"
+@import "~bulma/sass/elements/table.sass"
+$tag-radius: 14px
+@import "~bulma/sass/elements/tag.sass"
+$title-color: $black
+$subtitle-color: $black
+@import "~bulma/sass/elements/title.sass"
+@import "~bulma/sass/elements/other.sass"
+
+// TITLE CLASS OVERRIDE
+.title
+  margin-bottom: 1rem
+  font-family: $antonio-light
+  font-weight: $weight-light
+
+
+
+// FORM CLASS OVERRIDE
+.file-component
+  .label
+    color: $grey-dark
+    margin-top: 0.4em
+
+.form-component
+   margin-top: 3.9rem
+   .title
+     padding-bottom: 0.18em
+     margin-bottom: 0.71em
+
+.label
+  &:not(:last-child)
+    margin-bottom: 0.5385em
+
+.input
+  height: 2.924em
+  padding-left: calc(1.6154em - 10px)
+  padding-right: calc(1.6154em - 10px)
+
+
+.form-dependent
+  .input
+    background-color: #fbfcfb
+
+
+.input:focus,
+.input.is-focused,
+.input:active,
+.input.is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active
+  transition: border 0.15s ease-in
+  box-shadow: 0 0 4px 0em rgba(109, 116, 112, 0.15)
+
+.select select:focus,
+.select select.is-focused,
+.select select:active,
+.select select.is-active
+  box-shadow: none
+
+.select:not(.is-multiple)
+  height: 2.924em
+
+
+.select
+  select
+    height: 2.924em
+    &:not([multiple])
+      padding-left: calc(1.6154em - 10px)
+
+
+.help
+    display: block
+    font-size: 0.85rem
+    margin-top: 0.25rem
+
+
+
+// RADIO CLASS OVERRIDE
+.radio
+    outline: none
+    display: inline-flex
+    align-items: center
+    & + .radio
+        margin-left: 0.5em
+
+    input[type=radio]
+        display: none
+        + .check
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 1.385em
+            height: 1.385em
+            border: 1px solid $grey-light
+            border-radius: 50%
+            -webkit-transition: opacity 0.1s ease-in
+            -moz-transition: opacity 0.1s ease-in
+            -o-transition: opacity 0.1s ease-in
+            transition: opacity 0.1s ease-in
+            &:before
+                content: ""
+                border-radius: 50%
+                width: 0.615em
+                height: 0.615em
+                background: $green
+                transform: scale(0)
+                transition: transform 0.1s $easing
+
+        &:checked + .check
+            &:before
+                transform: scale(1.05)
+
+    .control-label
+        padding-left: 0.8em
+
+    &[disabled]
+        opacity: 0.5
+
+// CHECKBOX CLASS OVERRIDE
+.checkbox
+    &.checkbox
+        outline: none
+        display: inline-flex
+        align-items: center
+        & + .checkbox
+            margin-left: 0.5em
+
+        input[type=checkbox]
+            display: none
+            + .check
+                position: relative
+                width: 1.385em
+                height: 1.385em
+                flex-shrink: 0
+                border: 1px solid $grey-light
+                &:before
+                   position: absolute
+                   content: ''
+                   opacity: 0
+                   left: 0.442em
+                   top: 0.11em
+                   width: 6px
+                   height: 10px
+                   border: solid $green
+                   border-width: 0 3px 3px 0
+                   transform: rotate(45deg)
+                   -webkit-transition: opacity 0.1s ease-in
+                   -moz-transition: opacity 0.1s ease-in
+                   -o-transition: opacity 0.1s ease-in
+                   transition: opacity 0.1s ease-in
+
+            &:checked + .check
+              &:before
+                opacity: 1
+
+
+        .control-label
+            padding-left: 1.6em
+
+        &[disabled]
+            opacity: 0.5
+
+// BUTTON CLASS OVERRIDE
+.button.is-large
+  padding-left: 1.62em
+  padding-right: 1.62em
+  height: 3.1em
+  font-size: 1em
+
+.button
+  font-family: $opensans-bold
+  font-weight: $weight-bold
+  border-radius: 3px
+
+.button.is-outlined
+  font-family: $opensans-semibold
+  font-weight: $weight-semibold
+
+// TAGS CLASS OVERRIDE
+.tag:not(body)
+  min-width: 9.7rem
+  height: 2.4em
+  font-family: $opensans-semibold
+  font-weight: $weight-medium
+  font-size: 0.8rem
+  background-color: $white !important
+  border-width: 1px 1px 1px 1px
+  border-style: solid
+  text-transform: uppercase
+
+
+.tag:not(body)
+  @each $name, $pair in $colors
+      $color: nth($pair, 1)
+      $color-invert: nth($pair, 2)
+      &.is-#{$name}
+        border-color: $color
+        color: $color
+
+
+
+// TABLE CLASS OVERRIDE
+.table
+  margin-bottom: 3rem
+
+
+
+// ICONS CLASS OVERRIDE
+
+.is-medium-icon
+  font-size: 1.4em

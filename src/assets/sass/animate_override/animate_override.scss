@@ -1,0 +1,6 @@
+$use-fade: true;
+$use-slide: true;
+$base-duration: 0.5s;
+$base-distance: 30px;
+@import "~animate-sass/helpers/_settings.scss";
+@import "~animate-sass/_animate.scss";

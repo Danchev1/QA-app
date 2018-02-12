@@ -1,0 +1,260 @@
+@import "material_design/materialdesignicons"
+@import "bulma_override/bulma_override"
+@import "custom_elements/review_button"
+@import "custom_elements/switch"
+@import "custom_elements/tabs_content"
+@import "custom_elements/collapse"
+@import "custom_elements/comments_section"
+@import "custom_elements/snackbar.sass"
+@import "custom_elements/devider"
+@import "flatpickr/flatpickr"
+@import "_layout"
+
+// title
+.line-under
+  border-bottom: 1px solid $green
+//Upload Button
+.uppload-btn
+  position: relative
+  overflow: hidden
+  cursor: pointer
+  input[type=file]
+    position: absolute
+    left: 0
+    top: 0
+    opacity: 0
+
+.is-bottom-paddingless
+  padding-bottom: 0
+
+.is-top-paddingless
+  padding-top: 0
+
+// Veridens Dashboard
+
+.veridens-dashboard
+  margin-top: 4rem
+  table
+    thead
+      border-bottom: 1px solid $green
+      border-top: 1px solid $green
+      tr
+        &:hover
+          background-color: $white
+      th
+        font-weight: $weight-normal
+        color: $grey-dark
+        padding-top: 1.238em
+        padding-bottom: 1.238em
+        border-bottom: none
+        &:last-child
+          text-align: right
+
+    tbody
+      tr
+        border-bottom: 1px solid $grey-light
+        tbody
+          tr:first-child
+            @media screen and (max-width: 768px)
+                background-color: $grey-lighter
+      td
+        color: $black
+        padding-top: 1.077em
+        padding-bottom: 1.154em
+        vertical-align: middle
+        border-bottom: 1px solid $grey-light
+        &:last-child
+          text-align: right
+
+.table-holder
+  width: 100%
+  padding: 0 $column-gap
+// DEMO CASE VIEW
+
+.grid-box
+  margin-bottom: 1.462rem
+  & > span:first-child
+    display: block
+    margin-bottom: 0.2em
+    color: $grey-dark
+
+
+
+// ISSUES TABLE
+.flex-table
+  $md: 1024px
+
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  border-bottom: 1px solid $grey-light
+  // .Table-header
+  &-header
+    display: none
+    margin-bottom: 0
+    @media (min-width: 769px)
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-orient: horizontal
+      -webkit-box-direction: normal
+      -ms-flex-flow: row nowrap
+      flex-flow: row nowrap
+      padding-bottom: 0.4em
+      font-weight: 700
+      border-bottom: 1px solid $grey
+      .flex-table-row-item
+        color: $grey
+
+  .flex-table-header
+    @media (min-width: 769px)
+      border-top: none
+      border-top: 1px solid $green
+      border-bottom: 1px solid $green
+  // .Table-row
+  &-row
+    width: 100%
+    background-color: $white-bis
+    padding: 0.68em 0
+    margin-bottom: 2em
+    @media (min-width: 769px)
+      display: flex
+      flex-flow: row nowrap
+      margin-bottom: 0
+      background-color: $white
+      border-bottom: 1px solid $grey-light
+    // .Table-row-item
+    &-item
+      & > .button
+        margin-top: 2em
+        max-width: 200px
+        @media(min-width: 769px)
+          margin-top: 0
+      &:first-child
+        flex-grow: 1
+        @media (min-width: 769px)
+         flex-grow: 0.25
+
+    &-item
+      display: flex
+      flex-flow: column nowrap
+      flex-grow: 1
+      padding: 0 1em 0.5em
+      word-break: break-word
+      .flex-table-row-item
+        padding-top: 0
+        padding-bottom: 0
+      .flex-table-row-item:first-child
+        flex-grow: 2
+        padding-left: 0
+      &:before
+        content: attr(data-heading)
+        width: 100%
+        margin-bottom: 0.3em
+        border-bottom: 1px solid $grey
+        color: $green
+        font-family: $opensans-semibold
+        font-weight: $weight-semibold
+      .flex-table-row-item
+        &:before
+          padding: 0
+          border: none
+
+      @media (min-width: 769px)
+        flex-flow: row nowrap
+        flex-basis: 0
+        padding: 0.5em
+        .button
+          margin-left: auto
+        &:before
+          content: none
+
+  &-row
+    &:last-child
+      border-bottom: none
+
+
+.flex-table .form-component
+  flex-grow: 0.1
+  display: flex
+  flex-flow: column
+  margin-top: 0
+  .file
+    .label
+      margin-bottom: 0.5385em
+
+.nested
+  overflow: hidden
+  height: 0
+  min-height: 0
+  max-height: 0
+  margin-bottom: 1.2em
+  opacity: 0
+  border-top: none
+  -webkit-transition: all 0.2s ease-out
+  -moz-transition: all 0.2s ease-out
+  -o-transition: all 0.2s ease-out
+  transition: all 0.2s ease-out
+  @media(min-width: 767px)
+    margin-bottom: 0
+  .file-component
+    .label
+      margin-top: 0.5em
+
+
+
+// ISSUES VIEW
+
+.issues-view
+  margin-top: 4rem
+  .save-issue
+    width: 100%
+    max-width: 130px
+    @media(min-width: 769px)
+      margin-top: 2.05em
+      margin-left: 2em
+      max-width: 100px
+  input
+    height: 2.2em
+
+
+
+.flex-table-row-item .flex-table-row-item
+  @media(max-width: 768px)
+    padding-left: 0
+    padding-right: 0
+
+
+// PROGRESS BAR
+
+.progress
+  position: relative
+  height: 1.539em
+  overflow: hidden
+  background-color: #fff
+  border-radius: 0
+  border: 1px solid #e6ebe6
+  text-align: center
+  font-family: $opensans-bold
+  font-weight: $weight-bold
+  color: $green
+  .progress-bar
+    position: absolute
+    padding: 0 5px
+    width: 50%
+    height: 100%
+    left: 0
+    top: 0
+    overflow: hidden
+    background-color: $green
+    -webkit-transition: width .6s ease
+    -o-transition: width .6s ease
+    transition: width .6s ease
+  .progress-bar-text
+    position: absolute
+    width: 100%
+    line-height: 18px
+    color: $green-darker
+    font-family: $opensans-bold
+    font-weight: $weight-bold
+    text-align: center

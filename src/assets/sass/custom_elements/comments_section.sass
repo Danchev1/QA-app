@@ -1,0 +1,37 @@
+$auditor-comment-background: hsla(195, 86%, 42%, 0.07)
+$customer-comment-background: hsla(240, 12%, 97%, 0.4)
+.comments-section
+  &>.title
+    margin-top: 1.5em
+  &>.comment
+    padding: 1em
+    margin-bottom: 1em
+    font-size: 0.95rem
+
+  .auditor-comment
+    background-color: $auditor-comment-background
+    text-align: right
+    margin-left: 3rem
+    p
+     padding-left: 1.5em
+
+  .customer-comment
+    background-color: $customer-comment-background
+    text-align: left
+    margin-right: 3rem
+    p
+     padding-right: 1.5em
+
+.comment
+  .comment-title
+    display: flex
+    flex-flow: column
+    margin-bottom: 1em
+    color: $grey-darker
+
+    .date
+      color: $grey-dark
+      font-size: 0.8em
+
+  p
+   color: $grey-dark

@@ -1,0 +1,149 @@
+#main-public, #main-customer, #main-auditor, #main-administrator
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  background-image: none
+  baclground-color: transperant
+
+.main-view
+  width: 100%
+  min-height: 800px
+  padding: 3.846em 2.308em 3.846em
+  border: 1px solid $grey-light
+  background: $white
+  box-shadow: 0 0 24px -5px rgba(0, 0, 0, 0.1)
+
+.main-container
+  position: relative
+  display: flex
+  flex-flow: column
+  flex: 1
+  width: 50%
+  transition: all .2s ease
+
+
+.main-container.isOpen
+    @media screen and (max-width: 1125px)
+       background: rgba(0, 0, 0, 0.6)
+       .section
+         position: relative
+         z-index: -2
+
+
+// LOGIN PAGE
+.login-page
+  header
+    border-bottom: none!important
+  .main-container
+    background: url('../images/inspection-service.jpg') center center no-repeat !important
+    background-size: cover!important
+
+  @media screen and (max-width: 1125px)
+    .main-container.isOpen .section
+      z-index: 0!important
+
+  .section
+    height: 100%!important
+    padding: 0!important
+
+  .slideout-navigation
+    position: absolute!important
+    left: -23.2rem!important
+    z-index: 99!important
+    width: 23.1rem!important
+    height: 100%!important
+    margin-top: 0!important
+    background: #242829!important
+    -webkit-overflow-scrolling: touch!important
+    transition: all 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99)!important
+  .slideout-navigation.isOpen
+    left: 0!important
+    @media screen and (max-width: 450px)
+      width: 100%!important
+
+
+//////
+//// PUBLIC PAGE
+.start-page
+  .main-view
+    max-width: 960px
+    background: rgb(255,255,255)
+  .main-container
+    background: url('../images/inspection-service.jpg') center center no-repeat !important
+    background-size: cover!important
+
+.section
+  @media screen and (min-width: 450px)
+    position: relative
+    padding-left: 1rem
+    padding-right: 1rem
+
+.contained
+  position: relative
+  display: flex
+  flex-direction: row
+  flex: 1
+  height: 100%
+  transition: background .3s ease-in
+  @media screen and (max-width: 1125px)
+    margin-top: -1px
+
+
+// REVIEW CASE
+.case-review-view.main-view,
+.create-certificate-view.main-view,
+.published-certificate-view.main-view
+  padding-top: 0
+  padding-left: 0
+  padding-right: 0
+  box-shadow: none
+  background-color: transparent
+  border: none
+
+.case-review-view,
+.create-certificate-view,
+.published-certificate-view
+  display: flex
+  flex-direction: row
+  .section
+    margin: 0 1.15rem
+    padding: 3.846em 2.308em 3.846em
+    background-color: $white
+    border: 1px solid $grey-light
+    box-shadow: 0 0 24px -5px rgba(0, 0, 0, 0.1)
+    &+.section
+      padding: 1rem 0 3.864rem
+      width: 100%
+      max-width: 40%
+
+
+////
+@media screen and (max-width: 1125px)
+  .main-container
+    width: 100%
+
+
+
+// CONFIRMATION FROM
+.confirmation-form.main-view
+  max-width: 400px
+  min-height: 450px
+  padding: 3.846em 1.846em
+  .form-component
+    margin-top: 0
+
+
+// AUDITOR PAGE
+.assign-auditor-view
+  .table
+    margin-bottom: 1.5rem
+
+///SWITCH LABEL
+.label-switched
+  display: inline-block
+  min-width: 8.7rem !important
+  font-size: 0.8rem !important
+  height: 1.7rem !important
+  line-height: 1.7 !important
+  text-transform: uppercase
+

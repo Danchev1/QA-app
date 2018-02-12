@@ -1,0 +1,58 @@
+@import "~bulma/sass/base/minireset.sass"
+$body-background-color: #fbfbfb
+$body-size: 13px
+$body-color: $black
+$link: $success
+$hr-background-color: $green
+$hr-margin: 0.3em 0 1.5em
+$body-line-height: 1.6
+$body-family: $opensans-regular
+$strong-weight: $weight-semibold
+@import "~bulma/sass/base/generic.sass"
+
+@import "~bulma/sass/base/helpers.sass"
+
+// GENERIC CLASS OVERRIDE
+html
+  height: 100%
+  overflow-y: auto
+
+body
+  height: 100%
+  letter-spacing: 1px
+
+strong
+  font-family: $opensans-semibold
+
+// HELPERS CLASS OVERRIDE
+.has-text-weight-normal
+  font-family: $opensans-regular
+
+.has-text-weight-semibold
+  font-family: $opensans-semibold
+
+.has-text-weight-bold
+  font-family: $opensans-bold
+
+.is-align-right-flex
+  margin-left: auto
+
+.is-align-left-flex
+  margin-right: auto
+// ADDITIONAL HELPER CLASSES
+.is-hidden
+  display: none
+
+.order-1
+  @media screen and (max-width: 768px)
+    order: 1
+.order-2
+  @media screen and (max-width: 768px)
+    order: 2
+.order-3
+  @media screen and (max-width: 768px)
+    order: 3
+
+.radius-circle
+  border-radius: 50%!important
+

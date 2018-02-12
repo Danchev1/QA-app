@@ -1,0 +1,78 @@
+.notices
+    position: fixed
+    display: flex
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
+    pointer-events: none
+    .snackbar
+        display: flex
+        align-items: center
+        justify-content: space-around
+        animation-duration: 0.3s
+        margin: 0.5em
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04)
+        border-radius: 0
+        pointer-events: auto
+        background: $grey-darker
+        color: $dark-invert
+        min-height: 3em
+        .text
+            padding: 0.5em 1em
+            @each $name, $pair in $colors
+                $color: nth($pair, 1)
+                &.is-#{$name}
+                        color: $color
+
+        .action
+            margin-left: auto
+            padding: 0.5em
+            padding-left: 0
+            .button
+                font-weight: $weight-semibold
+                text-transform: uppercase
+
+            @each $name, $pair in $colors
+                $color: nth($pair, 1)
+                &.is-#{$name}
+                    .button
+                        color: $color
+
+
+
+        @include mobile
+            width: 100%
+            margin: 0
+            border-radius: 0
+
+        @include tablet
+            min-width: 350px
+            max-width: 600px
+            overflow: hidden
+
+
+    // Modifers
+    &.is-top
+        justify-content: center
+
+    &.is-top-right
+        justify-content: flex-end
+
+    &.is-bottom
+        top: auto
+        bottom: 0
+        justify-content: center
+
+    &.is-bottom-left
+        top: auto
+        bottom: 0
+
+    &.is-bottom-right
+        top: auto
+        bottom: 0
+        justify-content: flex-end
+
+    &.is-toast
+        opacity: 0.92
+

@@ -1,0 +1,56 @@
+// REVIEW PAGE
+
+
+.review-actions
+  display: flex
+  .button:first-child
+    margin-right: 10px
+
+.review-actions
+  .button.is-outlined.is-danger
+    &:focus
+      background-color: $white
+      .icon
+        color: $red
+
+    .icon
+      color: $red
+
+    &:hover
+      background-color: $red
+      .icon
+        color: $white
+
+  .button.not-ok
+    background-color: $red
+    .icon
+      color: $white
+
+    &:focus
+      .icon
+        color: $white
+
+    &:hover
+      .icon
+        color: $white
+
+  .check-pending.is-success.is-outlined
+    &:focus
+      background-color: $white
+    &:hover
+      background-color: $green
+      .icon
+        color: $white
+    .icon
+      color: $green
+
+  .check-ok
+    .icon
+      color: $white
+
+
+
+.review-actions.customer
+  .icon
+    i
+     font-size: 1.6em
